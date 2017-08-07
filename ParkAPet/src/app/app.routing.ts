@@ -5,6 +5,7 @@ import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { LandingComponent } from './landing/landing.component';
 import { CreateComponent } from './createpost/create.component';
+import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './_guards/index';
 
 const appRoutes: Routes = [
@@ -13,6 +14,8 @@ const appRoutes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: '', component: LandingComponent},
     { path: 'new', component: CreateComponent},
+    { path: 'profile', component: ProfileComponent},
+    
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

@@ -19,6 +19,7 @@ import { RegisterComponent } from './register/index';
 import { LandingComponent } from './landing/landing.component';
 import { CreateComponent } from './createpost/create.component';
 import { PetPost } from './createpost/petPosts/posts.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
     imports: [
@@ -36,7 +37,8 @@ import { PetPost } from './createpost/petPosts/posts.component';
         RegisterComponent,
         LandingComponent,
         CreateComponent,
-        PetPost
+        PetPost,
+        ProfileComponent
     ],
     providers: [
         AuthGuard,
