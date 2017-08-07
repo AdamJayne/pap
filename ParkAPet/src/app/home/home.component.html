@@ -1,5 +1,10 @@
-<div class="col-md-6 col-md-offset-3">
-    <h1>current user: {{currentUser.firstName}}!</h1>
+
+
+    <div class="col-md-6 col-md-offset-3">
+<body class="home">
+  <div class="container">
+        <div class="home-col">
+    <h1>Welcome {{currentUser.firstName}}!</h1>
     <p>Home View root</p>
     <h3>All registered users:</h3>
     <ul>
@@ -9,4 +14,6 @@
         </li>
     </ul>
     <p><a [routerLink]="['/login']">Logout</a></p>
+    </div>
+    
 </div>

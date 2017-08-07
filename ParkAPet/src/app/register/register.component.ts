@@ -6,6 +6,7 @@ import { AlertService, UserService } from '../_services/index';
 @Component({
     moduleId: module.id,
     templateUrl: 'register.component.html',
+    styleUrls: ['./signup.css'],
     selector: 'signin-root'
 })
 
