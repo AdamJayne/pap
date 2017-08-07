@@ -15,7 +15,7 @@
 
       
     <!--Facebook page  -->
-     <div class="form-group" 
+     <div class="form-group" >
             <label for="facebookProfilePage">Facebook Profile Page</label>
             <input type="text" class="form-control" name="facebookProfilePage" [(ngModel)]="model.facebookProfilePage" #facebookProfilePage="ngModel" required />
             <div *ngIf="f.submitted && !facebookProfilePage.valid" class="help-block">Facebook Profile Page is required</div>
