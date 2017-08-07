@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-xs-12">
         <form #f='ngForm' (ngSubmit)='onSubmit(f)'>
-            <input name='petName' type="text" ngModel required #petName='ngModel'>
-            <textarea name='description' ngModel required #description='ngModel'></textarea>
-            <input name='image Url' type="text" ngModel required #image='ngModel'>
+            <input name='petName' type="text" [(ngModel)]='model.name' required>
+            <textarea name='description' [(ngModel)]='model.description' required></textarea>
+            <input name='image Url' type="text" [(ngModel)]='model.imgurl' required>
             <button class="btn btn-success">New Pet</button>
         </form>
     </div>
@@ -22,8 +22,6 @@
                     </span>
                 </li>
             </ul>
-           
         </a>
-        
     </div>
 </div>
