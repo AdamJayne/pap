@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form #f='ngForm' (ngSubmit)='onSubmit(f)'>
+            <input name='petName' type="text" ngModel required #petName='ngModel'>
+            <textarea name='description' ngModel required #description='ngModel'></textarea>
+            <input name='image Url' type="text" ngModel required #image='ngModel'>
+            <button class="btn btn-success">New Pet</button>
+        </form>
+    </div>
+</div>
+<div >
+    <div >
+        <a href="#" class="list-group-item clearfix">
+            <ul>
+                 <li *ngFor="let Post of petList" class="pull-left">
+                    <h4 class="list-group-item-heading">
+                        Pet Name: {{Post.nameOfAnimal}}
+                    </h4>
+                    <p class="list-group-item-text">Description: {{this.petList.description}}</p>
+                    <span class="pull-right">
+                        <img src='{{Post.imagePath}}' alt="" class="img-responsive" style="max-height: 50px;">
+                    </span>
+                </li>
+            </ul>
+           
+        </a>
+        
+    </div>
+</div>

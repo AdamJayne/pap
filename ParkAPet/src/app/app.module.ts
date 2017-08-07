@@ -17,6 +17,8 @@ import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { LandingComponent } from './landing/landing.component';
+import { CreateComponent } from './createpost/create.component';
+import { PetPost } from './createpost/petPosts/posts.component';
 
 @NgModule({
     imports: [
@@ -32,7 +34,9 @@ import { LandingComponent } from './landing/landing.component';
         HomeComponent,
         LoginComponent,
         RegisterComponent,
-        LandingComponent
+        LandingComponent,
+        CreateComponent,
+        PetPost
     ],
     providers: [
         AuthGuard,
