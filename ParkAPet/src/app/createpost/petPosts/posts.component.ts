@@ -15,7 +15,5 @@ export class PetPost {
     constructor(){
         console.log(this.petList);
     }
-    onSubmit(f: NgForm) {
-        new Post(f.petName, f.description, f.image)
-    }
+    
 }
