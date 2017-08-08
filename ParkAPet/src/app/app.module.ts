@@ -25,7 +25,7 @@ import { LandingComponent } from './landing/landing.component';
 import { CreateComponent } from './createpost/create.component';
 import { PetPost } from './createpost/petPosts/posts.component';
 import { ProfileComponent } from './profile/profile.component';
-import { UpdateComponent } from './profile/src/app/profile/update/update.component';
+import { UpdateComponent } from './profile/update/update.component';
 
 @NgModule({
     imports: [

@@ -9,9 +9,21 @@ import { User } from '../_helpers/_models/index';
 export class UserService {
     signup(email: string, password: string){
         this.afa.auth.createUserWithEmailAndPassword(email, password)
-            .then(() => {
+            .then((response) => {
+                console.log(response);
                 console.log("Signed Up!");
+                localStorage.setItem('userId', response.uid);
             }).catch((err) =>{
+                console.log(err);
+            })
+    }
+    signin(email: string, password: string){
+        this.afa.auth.signInWithEmailAndPassword(email, password)
+            .then((response) => {
+                console.log(response);
+                console.log("Signed In!");
+                localStorage.setItem('userId', response.uid);
+            }).catch((err) => {
                 console.log(err);
             })
     }
