@@ -21,12 +21,8 @@ export class PetPost {
     constructor(){
         console.log(this.petList);
     }
-<<<<<<< HEAD
-    
-=======
     onSubmit() {
         this.petList.push(new Post(this.model.name, this.model.description, this.model.imgurl))
         console.log(this.petList);
     }
->>>>>>> 46971a3de9fe8c66a5b25aebd952155c5a867830
 }
