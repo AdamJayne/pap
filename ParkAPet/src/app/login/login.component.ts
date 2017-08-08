@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { AngularFireAuth } from 'angularfire2/auth';
+import { UserService } from '../_services/user.service';
 
 import { AlertService, AuthenticationService } from '../_services/index';
 
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private router: Router,
-        private afa: AngularFireAuth,
+        private usrSvc: UserService,
         private alertService: AlertService) { }
 
     ngOnInit() {
@@ -32,11 +32,6 @@ export class LoginComponent implements OnInit {
     }
 
     login() {
-        this.afa.auth.signInWithEmailAndPassword(this.model.email, this.model.password)
-            .then(() => {
-                console.log("Signed In!");
-            }).catch((err) =>{
-                console.log(err);
-            })
+        this.usrSvc.signin(this.model.email, this.model.password)
     }
 }

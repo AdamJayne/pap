@@ -43,6 +43,14 @@ p {
     font-family: Open Sans;
 }
 
+label {
+    display: inline-block;
+  font-family: 'Heebo', Helvetica, Arial, sans-serif;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
 #margin {
     margin-left: 100px;
     margin-right: 100px;
@@ -78,6 +86,14 @@ a.btn.btn-link {
 
 
 /*input text area*/
+
+input[type=text]{
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.0);
+  border-top:none;
+  border-right: none;
+  border-left:none;
+}
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px rgba(255,255,255,0) inset;
 }
@@ -90,16 +106,20 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     background-color:rgba(255,255,25,,0);
     background-image: none;
     color: rgb(0, 0, 0);
+    
 }
 
 input[type=text]:focus, textarea:focus {
  color: #fff;
-  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  box-shadow: 0 0 5px rgba(255,255,255,0.1);
   background-color: rgba(255,255,255,0);
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
   border-right: rgba(255,255,255,0);
-  border: 1px solid rgba(81, 203, 238, 1);
+  background-color: rgba(255, 255, 255, 0.0);
+  border-top:none;
+  border-right: none;
+  border-left:none;
 }
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
@@ -110,7 +130,21 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 input.form-control.ng-dirty.ng-valid.ng-touched {
     background-color:rgba(255,255,255,0);
-    color:#fff;
+    color:#333436;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+     margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.0);
+  border-top:none;
+  border-right: none;
+  border-left:none;
 }
 
 .form-control:focus {
@@ -118,6 +152,10 @@ input.form-control.ng-dirty.ng-valid.ng-touched {
     border-color: #FFF;
     outline: 0;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #FFF;
+}
+
+textarea.ng-dirty.ng-valid.ng.touched {
+  background-color: rgba(255, 255, 255, 0.0);
 }
 
 .container {
@@ -297,7 +335,6 @@ span.a {
   height: 700px;
   min-width: 300px;
   border-radius: 15px;
-  
   margin-top: 10px;
   margin-bottom: 100px;
   padding-top: 160px;
@@ -368,6 +405,91 @@ dogs {
 dogs:hover {
   background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/7a38a088-8de8-4c4b-9d52-cf7c407a637e.jpg._CB520505262__SR300,300_.jpg');
   opacity: 2;
+}
+
+/*new post page */
+.new-post {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  color: #fff;
+  font-family: 'Heebo', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  width: 800px;
+  height: 360px;
+  min-width: 300px;
+  border-radius: 15px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding bottom: 10px;
+  border-radius: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(185, 174, 240,0.7);
+
+}
+.pets-feed {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  width: 800px;
+  height: 700px;
+  min-width: 300px;
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.2);
+}
+
+
+/*description text area*/
+textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    width: 100%;
+    height:100px;
+    flex-direction: column;
+    resize: auto;
+    cursor: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    padding: 2px;
+}
+
+li.pull-left {
+  color: #333436;
+}
+
+
+
+.list-group-item {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-bottom:20px;
+}
+
+.list-group-item:first-child {
+  background-color: #000;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;;
+    margin-bottom:20px;
 }
 
 /*buttons*/
@@ -496,7 +618,7 @@ arrow {
   background: rgba(255,255,255,0.7);
 }
 .email:after {
-  content: "\F0E0";
+  content: "+";
 }
 .email:hover:after {
   -webkit-animation: none;
