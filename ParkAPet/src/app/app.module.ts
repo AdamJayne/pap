@@ -21,7 +21,7 @@ import { AlertService, AuthenticationService, UserService } from './_services/in
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
-import { LandingComponent } from './landing/landing.component';
+import { LandingComponent } from './home/landing/landing.component';
 import { CreateComponent } from './createpost/create.component';
 import { PetPost } from './createpost/petPosts/posts.component';
 import { ProfileComponent } from './profile/profile.component';

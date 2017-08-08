@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
-import { LandingComponent } from './landing/landing.component';
+import { LandingComponent } from './home/landing/landing.component';
 import { CreateComponent } from './createpost/create.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './_guards/index';
