@@ -32,6 +32,6 @@ export class LoginComponent implements OnInit {
     }
 
     login() {
-        this.usrSvc.signin(this.model.email, this.model.password)
+        this.usrSvc.signin(this.model.email, this.model.password);
     }
 }

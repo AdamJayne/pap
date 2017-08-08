@@ -22,7 +22,6 @@ export class PetPost {
         console.log(this.petList);
     }
     onSubmit() {
-        this.petList.push(new Post(this.model.name, this.model.description, this.model.imgurl))
-        console.log(this.petList);
+        
     }
 }
