@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
-
+import { Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 import { User } from '../_helpers/_models/index';
@@ -23,11 +23,16 @@ export class UserService {
                 console.log(response);
                 console.log("Signed In!");
                 localStorage.setItem('userId', response.uid);
+                this.router.navigateByUrl('/home');
             }).catch((err) => {
                 console.log(err);
             })
     }
+    signout(){
+        localStorage.clear();
+    }
     constructor(
-        private afa: AngularFireAuth
+        private afa: AngularFireAuth,
+        private router: Router
     ) {}
 }
