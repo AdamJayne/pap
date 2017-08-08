@@ -7,7 +7,8 @@ import { AlertService } from '../_services/alert.service';
 @Component({
     moduleId: module.id,
     selector: 'profile-root',
-    templateUrl: 'profile.component.html'
+    templateUrl: 'profile.component.html',
+    styleUrls: ['profile.component.css']
 })
 
 export class ProfileComponent implements OnInit {
