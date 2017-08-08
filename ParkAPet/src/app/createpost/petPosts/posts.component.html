@@ -1,27 +1,102 @@
+<div class="sidebar">
+
+    </div>
+
+
+   <a [routerLink]="['/home']" class="btn delete"></a>
 <div class="row">
-    <div class="col-xs-12">
+     <div class="new-post">
+         
         <form #f='ngForm' (ngSubmit)='onSubmit(f)'>
+        
+            <p>Enter Name:</p>
             <input name='petName' type="text" [(ngModel)]='model.name' required>
-            <textarea name='description' [(ngModel)]='model.description' required></textarea>
+           
+            <p>please enter an image URL:</p>
             <input name='image Url' type="text" [(ngModel)]='model.imgurl' required>
-            <button class="btn btn-success">New Pet</button>
+            <p>Tell Us about The Pet:</p>
+            <textarea name='description' placeholder='ex; 08/20/2017-08/27/2017. 
+            Looking for someone nearby to watch my dog, $40 a day. email me at
+            gg@example.com to discuss. Thankyou!' [(ngModel)]='model.description' required></textarea>
+<br><br>
+            <div align="right">
+            <button [disabled]="loading" class="button  email">Create Post</button>
+           </div>
+           <br>
+            <br>
         </form>
     </div>
 </div>
 <div >
-    <div >
+    <br>
+    <div>
+        <div class="pets-feed">
         <a href="#" class="list-group-item clearfix">
-            <ul>
-                 <li *ngFor="let Post of petList" class="pull-left">
-                    <h4 class="list-group-item-heading">
+            <ul style="list-style-type: none">
+        <li *ngFor="let Post of petList" class="pull-left"><BR>
+                    <h4 class="list-group-item-heading"><li>
                         Pet Name: {{Post.nameOfAnimal}}
                     </h4>
-                    <p class="list-group-item-text">Description: {{this.petList.description}}</p>
-                    <span class="pull-right">
-                        <img src='{{Post.imagePath}}' alt="" class="img-responsive" style="max-height: 50px;">
+                    <br>
+    <p class="list-group-item-text"><li>Description: {{this.petList.description}}</li></p>
+    <span class="pull-right">
+    <img src='{{Post.imagePath}}' alt="" class="img-responsive" style="max-height: 120px;">
+                    <br>
                     </span>
                 </li>
             </ul>
         </a>
     </div>
 </div>
+  </div>
+
+  
+<section id="banner">
+
+<div class="infowrapper">
+    <div class="info">
+        <h3>navigate</h3><br>
+        <ul style="list-style-type: none">
+            <li>home</li><br>
+            <li>login</li><br>
+            <li>create post</li><br>
+            <li>profile</li>
+
+        </ul>
+
+        </div>
+
+        <div class="infoo">
+        <h3>like us? Share</h3>
+            <ul class="soc-media-ul" style="list-style-type: none">
+        <li><a href="" class="fa fa-2x fa-twitter" target="_blank"></a></li>
+        <li><a href="" class="fa fa-2x fa-google-plus" target="_blank"></a></li>
+        <li><a href="" class="fa fa-2x fa-linkedin" target="_blank"></a></li>
+            </ul><br><br>
+            
+        </div>
+
+        <div class="infooo">
+        <h3>info</h3>
+        <ul style="list-style-type: none">
+            <li>
+        //view source code
+        </li><br>
+        <h5>(c) 2017 Park-A-Pet Design</h5>
+        <hr>
+     
+        <h3>Bio / Statement</h3>
+            <li>adam</li>
+            <li>emiliya</li>
+            <li>elena</li>
+
+        </ul>
+    </div>
+<footer id="footer">
+    <div class="container">
+        </div>
+</footer>
+    </div>
+
+
+</section>

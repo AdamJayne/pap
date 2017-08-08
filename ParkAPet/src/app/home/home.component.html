@@ -4,9 +4,8 @@
 <body class="home">
   <div class="container">
         <div class="home-col">
-    <h1>Welcome {{currentUser.firstName}}!</h1>
-    <p>Home View root</p>
-    <h3>All registered users:</h3>
+    <h1>You are logged in as, {{currentUser.firstName}}!</h1>
+    <h3>All Registered Users:</h3>
     <ul>
         <li *ngFor="let user of users">
             {{user.username}} ({{user.firstName}} {{user.lastName}})
