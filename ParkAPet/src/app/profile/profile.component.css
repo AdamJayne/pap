@@ -1,4 +1,4 @@
-<style type="text/css">
+
 #ProfilePage
 {
     /* Move it off the top of the page, then centre it horizontally */
@@ -21,7 +21,7 @@ border: 1px solid red;
     margin-right: 20px;
 
 /* For visibility. Delete me */
-border: 1px solid brown;
+border: 1px solid red;
 }
 
 #Photo
@@ -31,7 +31,7 @@ border: 1px solid brown;
     height: 200px;
 
 /* For visibility. Delete me */
-border: 1px solid green;
+border: 1px solid red;
 }
 
 #PhotoOptions
@@ -74,39 +74,6 @@ border: 1px solid orange;
 /* For visibility. Delete me */
 border: 1px solid purple;
 }
-</style>
-
-<div id="ProfilePage">
-    <div id="LeftCol">
-        <div id="Photo"></div>
-        <div id="ProfileOptions">
-        a
-        </div>
-    </div>
-
-    <div id="Info">
-        <p>
-            <strong>Name:</strong>
-            <span>Sirjon</span>
-        </p>
-        <p>
-            <strong>Name:</strong>
-            <span>Sirjon</span>
-        </p>
-        <p>
-            <strong>Name:</strong>
-            <span>Sirjon</span>
-        </p>
-        <p>
-            <strong>Name:</strong>
-            <span>Sirjon</span>
-        </p>
-        <p>
-            <strong>Name:</strong>
-            <span>Sirjon</span>
-        </p>
-    </div>
-
-    <!-- Needed because other elements inside ProfilePage have floats -->
-    <div style="clear:both"></div>
-</div>
+label{
+    color:whitesmoke;
+}
