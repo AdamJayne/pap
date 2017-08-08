@@ -6,10 +6,15 @@ import { HttpModule } from '@angular/http';
 import { fakeBackendProvider } from './_helpers/index';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
+// Firebase imports
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
 
 import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
-import {NavbarComponent} from './base/base.component';
+import { NavbarComponent } from './base/base.component';
 import { AlertComponent } from './_directives/index';
 import { AuthGuard } from './_guards/index';
 import { AlertService, AuthenticationService, UserService } from './_services/index';
@@ -20,13 +25,17 @@ import { LandingComponent } from './landing/landing.component';
 import { CreateComponent } from './createpost/create.component';
 import { PetPost } from './createpost/petPosts/posts.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UpdateComponent } from './profile/src/app/profile/update/update.component';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
-        routing
+        routing,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireDatabaseModule,
+        AngularFireAuthModule
     ],
     declarations: [
         AppComponent,
@@ -38,7 +47,8 @@ import { ProfileComponent } from './profile/profile.component';
         LandingComponent,
         CreateComponent,
         PetPost,
-        ProfileComponent
+        ProfileComponent,
+        UpdateComponent
     ],
     providers: [
         AuthGuard,

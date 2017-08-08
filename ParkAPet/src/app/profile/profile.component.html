@@ -1,5 +1,5 @@
 <div class="col-md-6 col-md-offset-3">
-   
+    <form>
     <div class="form-group"> 
             <label for="username">Username</label>
             <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
@@ -26,5 +26,5 @@
             <input type="text" class="form-control" name="petDescription" [(ngModel)]="model.petDescription" #petDescription="ngModel" required />
             <div *ngIf="f.submitted && !petDescription.valid" class="help-block">Pet Description is required</div>
         </div>
-
+    </form>
 </div>
