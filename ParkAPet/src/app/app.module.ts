@@ -29,6 +29,7 @@ import { CreateComponent } from './createpost/create.component';
 import { PetPost } from './createpost/petPosts/posts.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateComponent } from './profile/update/update.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     imports: [
@@ -51,7 +52,8 @@ import { UpdateComponent } from './profile/update/update.component';
         CreateComponent,
         PetPost,
         ProfileComponent,
-        UpdateComponent
+        UpdateComponent,
+        FooterComponent
     ],
     providers: [
         AuthGuard,
