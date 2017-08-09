@@ -8,7 +8,7 @@ import { CreateComponent } from './createpost/create.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './_guards/index';
 
-const appRoutes: Routes = [
+export const appRoutes = [
     { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
@@ -20,5 +20,3 @@ const appRoutes: Routes = [
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
-
-export const routing = RouterModule.forRoot(appRoutes);
