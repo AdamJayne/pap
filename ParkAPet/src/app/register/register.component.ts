@@ -6,6 +6,7 @@ import { AlertService, UserService } from '../_services/index';
 @Component({
     moduleId: module.id,
     templateUrl: 'register.component.html',
+    styleUrls: ['./signup.css'],
     selector: 'signin-root'
 })
 
@@ -19,16 +20,17 @@ export class RegisterComponent {
         private alertService: AlertService) { }
 
     register() {
-        this.loading = true;
-        this.userService.create(this.model)
-            .subscribe(
-                data => {
-                    this.alertService.success('Registration successful', true);
-                    this.router.navigate(['/login']);
-                },
-                error => {
-                    this.alertService.error(error);
-                    this.loading = false;
-                });
+        this.userService.signup(this.model.username, this.model.password);
+        // this.loading = true;
+        // this.userService.create(this.model)
+        //     .subscribe(
+        //         data => {
+        //             this.alertService.success('Registration successful', true);
+        //             this.router.navigate(['/login']);
+        //         },
+        //         error => {
+        //             this.alertService.error(error);
+        //             this.loading = false;
+        //         });
     }
 }
