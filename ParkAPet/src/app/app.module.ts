@@ -2,6 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers/index';
 import { MockBackend, MockConnection } from '@angular/http/testing';
@@ -9,11 +10,13 @@ import { BaseRequestOptions } from '@angular/http';
 // Firebase imports
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 
 import { AppComponent }  from './app.component';
-import { routing }        from './app.routing';
+import { appRoutes } from './app.routing';
 import { NavbarComponent } from './base/base.component';
 import { AlertComponent } from './_directives/index';
 import { AuthGuard } from './_guards/index';
@@ -32,7 +35,7 @@ import { UpdateComponent } from './profile/update/update.component';
         BrowserModule,
         FormsModule,
         HttpModule,
-        routing,
+        RouterModule.forRoot(appRoutes),
         AngularFireModule.initializeApp(environment.firebase),
         AngularFireDatabaseModule,
         AngularFireAuthModule
@@ -55,6 +58,8 @@ import { UpdateComponent } from './profile/update/update.component';
         AlertService,
         AuthenticationService,
         UserService,
+        AngularFireAuth,
+        AngularFireDatabase,
 
         // providers used to create fake backend
         fakeBackendProvider,

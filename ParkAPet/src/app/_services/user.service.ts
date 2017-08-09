@@ -22,8 +22,7 @@ export class UserService {
             .then((response) => {
                 console.log(response);
                 console.log("Signed In!");
-                localStorage.setItem('userId', response.uid);
-                this.router.navigateByUrl('/home');
+                this.router.navigateByUrl('home');
             }).catch((err) => {
                 console.log(err);
             })
