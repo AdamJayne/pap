@@ -11,7 +11,8 @@ export class PostService {
         private afd: AngularFireDatabase,
     ) {
         this.post = afd.object('/post');
-        this.posts = this.afd.list('/clients') as FirebaseListObservable<Post[]>
+        this.posts = this.afd.list('/post');
+        console.log(this.getAll());
     }
     // create
     create(userId, name, breed, description){
@@ -23,7 +24,20 @@ export class PostService {
         })
     }
     // getAllPosts
+    getAll(): Post[] {
+        let out: Post[] = new Array<Post>();
+        this.posts.forEach(item => {
+            item.forEach(post => out.push(post));
+        });
+        return out;
+    }
     // getUserPosts
+    getByUser(userId, callback){
+        this.afd.database.ref('/post').orderByChild('usrID').equalTo(userId).on("value", function(snapshot){
+            console.log(snapshot.val())
+            callback(snapshot.val())
+        })
+    }
     // update
     // delete
 }

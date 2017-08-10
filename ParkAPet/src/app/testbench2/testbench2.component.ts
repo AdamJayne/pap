@@ -20,8 +20,7 @@ export class Testbench2Component implements OnInit {
   }
 
   newPost(){
-    console.log("dicks");
-    var usrID = window.localStorage.getItem(usrID);
+    var usrID = window.localStorage.getItem('userId');
     this.pstSvc.create(usrID, this.post.petName, this.post.petBreed, this.post.description);
   }
 }

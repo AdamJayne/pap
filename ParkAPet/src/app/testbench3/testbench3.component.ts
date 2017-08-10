@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from '../_services/post.service';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-testbench3',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testbench3.component.css']
 })
 export class Testbench3Component implements OnInit {
-
-  constructor() { }
+  // items: FirebaseListObservable<any[]>;
+  items: any = [];
+  constructor(public pstSvc: PostService,
+              public afd: AngularFireDatabase) {
+                // this.items = afd.list('/post');
+                // console.log(this.items)
+                this.items = this.pstSvc.getAll();
+  }
 
   ngOnInit() {
+
   }
 
 }
