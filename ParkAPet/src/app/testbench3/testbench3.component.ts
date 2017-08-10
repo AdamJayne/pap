@@ -14,11 +14,11 @@ export class Testbench3Component implements OnInit {
               public afd: AngularFireDatabase) {
                 // this.items = afd.list('/post');
                 // console.log(this.items)
-                this.items = this.pstSvc.getAll();
+                
   }
 
   ngOnInit() {
-
+    this.items = this.pstSvc.getAll();
   }
-
+ 
 }
