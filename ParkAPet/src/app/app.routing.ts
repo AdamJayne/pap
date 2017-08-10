@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/index';
 import { LandingComponent } from './home/landing/landing.component';
 import { CreateComponent } from './createpost/create.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UpdateComponent } from './profile/update/update.component';
 import { AuthGuard } from './_guards/index';
 import { TestbenchComponent } from './testbench/testbench.component'
 
@@ -17,7 +18,10 @@ export const appRoutes = [
     { path: 'new', component: CreateComponent},
     { path: 'profile', component: ProfileComponent},
     { path: 'testbench', component: TestbenchComponent},
-    
+ 
+
+    { path: 'update', component: UpdateComponent },
+
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
