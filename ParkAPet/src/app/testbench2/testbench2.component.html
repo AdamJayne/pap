@@ -1,0 +1,17 @@
+
+  <h1>Post Form</h1>
+  <form #postForm="ngForm" (ngSubmit)="newPost()">
+    <div class="form-group">
+      <label for="name">Pet Name</label>
+      <input type="text" [(ngModel)]="post.petName" name="petName" class="form-control" id="name" required>
+    </div>
+    <div class="form-group">
+      <label for="breed">Pet Breed</label>
+      <input type="text" [(ngModel)]="post.petBreed" name="petBreed" class="form-control" id="breed" required> 
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea [(ngModel)]="post.description" name="description" id="description" rows="10" #description="ngModel"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Post</button>
+  </form>

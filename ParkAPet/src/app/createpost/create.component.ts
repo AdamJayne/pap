@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -8,7 +9,9 @@ import {Component} from '@angular/core';
 })
 
 
-
 export class CreateComponent {
-    
+    posts: FirebaseListObservable<any[]>;
+    constructor(db: AngularFireDatabase){
+        this.posts = db.list('/posts');
+    }
 }
