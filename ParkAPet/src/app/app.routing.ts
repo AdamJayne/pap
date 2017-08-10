@@ -7,6 +7,7 @@ import { LandingComponent } from './home/landing/landing.component';
 import { CreateComponent } from './createpost/create.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './_guards/index';
+import { TestbenchComponent } from './testbench/testbench.component'
 
 export const appRoutes = [
     { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
@@ -15,6 +16,7 @@ export const appRoutes = [
     { path: '', component: LandingComponent},
     { path: 'new', component: CreateComponent},
     { path: 'profile', component: ProfileComponent},
+    { path: 'testbench', component: TestbenchComponent},
     
 
     // otherwise redirect to home

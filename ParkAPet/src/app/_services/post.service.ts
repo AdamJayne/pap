@@ -1,15 +1,26 @@
-import { AngularFireAuth } from 'angularfire2/auth';
-import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import { Injectable } from '@angular/core';
+import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable} from 'angularfire2/database';
+import { Post } from '../_helpers/_models/post.model';
 
-
+@Injectable()
 export class PostService {
-    constructor(
-        private afd: AngularFireDatabase
+    post: FirebaseObjectObservable<any>;
+    posts: FirebaseListObservable<any[]>;
 
-    ) {}
+    constructor(
+        private afd: AngularFireDatabase,
+    ) {
+        this.post = afd.object('/post');
+        this.posts = this.afd.list('/clients') as FirebaseListObservable<Post[]>
+    }
     // create
-    create(userId, name, description, date){
+    create(userId, name, breed, description){
         // this.afd.database.ref('posts/'+)
+        var blar = new Post(userId, name, breed, description);
+        this.post = this.afd.object('/post/' + blar.petName);
+        this.post.set(blar).then(()=>{
+            console.log("Worked");
+        })
     }
     // getAllPosts
     // getUserPosts

@@ -9,7 +9,6 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 })
 
 
-
 export class CreateComponent {
     posts: FirebaseListObservable<any[]>;
     constructor(db: AngularFireDatabase){

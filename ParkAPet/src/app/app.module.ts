@@ -30,6 +30,10 @@ import { PetPost } from './createpost/petPosts/posts.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateComponent } from './profile/update/update.component';
 import { FooterComponent } from './footer/footer.component';
+import { TestbenchComponent } from './testbench/testbench.component';
+import { Testbench2Component } from './testbench2/testbench2.component';
+import { Testbench3Component } from './testbench3/testbench3.component';
+import { PostService } from './_services/post.service';
 
 @NgModule({
     imports: [
@@ -53,13 +57,17 @@ import { FooterComponent } from './footer/footer.component';
         PetPost,
         ProfileComponent,
         UpdateComponent,
-        FooterComponent
+        FooterComponent,
+        TestbenchComponent,
+        Testbench2Component,
+        Testbench3Component
     ],
     providers: [
         AuthGuard,
         AlertService,
         AuthenticationService,
         UserService,
+        PostService,
         AngularFireAuth,
         AngularFireDatabase,
 
