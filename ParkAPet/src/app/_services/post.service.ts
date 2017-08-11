@@ -12,7 +12,6 @@ export class PostService {
     ) {
         this.post = afd.object('/post');
         this.posts = this.afd.list('/post');
-        console.log(this.getAll());
     }
     // create
     create(userId, name, breed, description){
@@ -21,15 +20,20 @@ export class PostService {
         this.post = this.afd.object('/post/' + blar.petName);
         this.post.set(blar).then(()=>{
             console.log("Worked");
-        })
+        });
     }
     // getAllPosts
-    getAll(): Post[] {
-        let out: Post[] = new Array<Post>();
+
+    getEmAll(){
+        var out = []
         this.posts.forEach(item => {
-            item.forEach(post => out.push(post));
-        });
-        return out;
+            item.forEach(post=> out.push(post))
+        })
+        return out
+
+    }
+    getAll() {
+        return this.posts;
     }
     // getUserPosts
     getByUser(userId, callback){

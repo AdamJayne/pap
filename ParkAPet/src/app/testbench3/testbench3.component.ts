@@ -9,7 +9,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 })
 export class Testbench3Component implements OnInit {
   // items: FirebaseListObservable<any[]>;
-  items: any = [];
+  items;//: any = [];
   constructor(public pstSvc: PostService,
               public afd: AngularFireDatabase) {
                 // this.items = afd.list('/post');
@@ -18,6 +18,7 @@ export class Testbench3Component implements OnInit {
   }
 
   ngOnInit() {
+    this.items = [];
     this.items = this.pstSvc.getAll();
   }
  
