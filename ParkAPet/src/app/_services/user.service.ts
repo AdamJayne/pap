@@ -10,9 +10,9 @@ export class UserService {
     signup(email: string, password: string){
         this.afa.auth.createUserWithEmailAndPassword(email, password)
             .then((response) => {
-                console.log(response);
                 console.log("Signed Up!");
                 localStorage.setItem('userId', response.uid);
+                this.router.navigateByUrl('posts');
             }).catch((err) =>{
                 console.log(err);
             })
@@ -20,15 +20,16 @@ export class UserService {
     signin(email: string, password: string){
         this.afa.auth.signInWithEmailAndPassword(email, password)
             .then((response) => {
-                console.log(response);
+                localStorage.setItem('usrId', response.uid);
                 console.log("Signed In!");
-                this.router.navigateByUrl('home');
+                this.router.navigateByUrl('posts');
             }).catch((err) => {
                 console.log(err);
             })
     }
     signout(){
         localStorage.clear();
+        this.afa.auth.signOut()
     }
     constructor(
         private afa: AngularFireAuth,

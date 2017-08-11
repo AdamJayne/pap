@@ -61,8 +61,7 @@ import { FileUploader } from 'ng2-file-upload';
         FooterComponent,
         TestbenchComponent,
         Testbench2Component,
-        Testbench3Component,
-        FileUploader
+        Testbench3Component
     ],
     providers: [
         AuthGuard,

@@ -2,13 +2,13 @@
 <div class="container">
     <div *ngFor="let post of items | async" id="postItem">
       <div class="row">
-        <div id="petHead" class="col col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+        <div id="petHead">
           <h2>
             {{post.petName}}
           </h2>
           <p>{{post.petBreed}}</p>
         </div>
-        <div id="petBod" class="col col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+        <div id="petBod">
           {{post.description}}
         </div>
       </div>
