@@ -7,8 +7,7 @@ import { PostService } from '../_services/post.service';
   styleUrls: ['./testbench2.component.css']
 })
 export class Testbench2Component implements OnInit {
-  post: any = {};
-
+  post: any = [];
 
   constructor(
     private pstSvc: PostService

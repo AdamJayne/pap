@@ -15,11 +15,8 @@ export const appRoutes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: '', component: LandingComponent},
-    { path: 'new', component: CreateComponent},
+    { path: 'posts', component: TestbenchComponent},
     { path: 'profile', component: ProfileComponent},
-    { path: 'testbench', component: TestbenchComponent},
- 
-
     { path: 'update', component: UpdateComponent },
 
 

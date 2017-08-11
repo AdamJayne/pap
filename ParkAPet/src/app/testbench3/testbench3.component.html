@@ -1,22 +1,16 @@
-<div class="card">
-  <div class="card-header">
-    List of Posts
-  </div>
-  <div class="card-block">
-    
-    <div class="card" *ngFor="let post of items">
-      <div class="card-header">
-        {{post.name}}
-      </div>
-      <div class="card-block">
-        {{post.description}}
+<br>
+<div class="container">
+    <div *ngFor="let post of items | async" id="postItem">
+      <div class="row">
+        <div id="petHead">
+          <h2>
+            {{post.petName}}
+          </h2>
+          <p>{{post.petBreed}}</p>
+        </div>
+        <div id="petBod">
+          {{post.description}}
+        </div>
       </div>
     </div> 
-
-
-
-
-
-
-  </div>
 </div>
