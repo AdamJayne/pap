@@ -19,7 +19,6 @@ import { NavbarComponent } from './base/base.component';
 import { AlertComponent } from './_directives/index';
 import { AuthGuard } from './_guards/index';
 import { AlertService, AuthenticationService, UserService } from './_services/index';
-import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { LandingComponent } from './home/landing/landing.component';
@@ -32,6 +31,7 @@ import { Testbench3Component } from './testbench3/testbench3.component';
 import { PostService } from './_services/post.service';
 import { FileUploader } from 'ng2-file-upload';
 import { UserPostsComponent } from './user-posts/user-posts.component';
+import { UpdatePostComponent } from './update-post/update-post.component';
 
 @NgModule({
     imports: [
@@ -55,7 +55,8 @@ import { UserPostsComponent } from './user-posts/user-posts.component';
         TestbenchComponent,
         Testbench2Component,
         Testbench3Component,
-        UserPostsComponent
+        UserPostsComponent,
+        UpdatePostComponent
     ],
     providers: [
         AuthGuard,

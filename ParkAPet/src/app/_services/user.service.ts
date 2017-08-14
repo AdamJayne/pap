@@ -2,16 +2,24 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2/database';
 
-import { User } from '../_helpers/_models/index';
+import { User } from '../_helpers/_models/user';
 
 @Injectable()
 export class UserService {
-    signup(email: string, password: string){
+    user: FirebaseObjectObservable<any>;
+
+    signup(email: string, password: string, fName: string, lName: string){
         this.afa.auth.createUserWithEmailAndPassword(email, password)
             .then((response) => {
+                var using = new User(fName, lName)
                 console.log("Signed Up!");
                 localStorage.setItem('userId', response.uid);
+                this.user = this.afd.object('/user/'+ response.uid);
+                this.user.set(using).then(()=> {
+                    console.log("User Created!");
+                })
                 this.router.navigateByUrl('posts');
             }).catch((err) =>{
                 console.log(err);
@@ -29,10 +37,12 @@ export class UserService {
     }
     signout(){
         localStorage.clear();
-        this.afa.auth.signOut()
+        this.afa.auth.signOut();
     }
+
     constructor(
         private afa: AngularFireAuth,
+        private afd: AngularFireDatabase,
         private router: Router
     ) {}
 }
