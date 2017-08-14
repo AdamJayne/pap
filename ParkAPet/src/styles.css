@@ -72,11 +72,11 @@ label {
 
 /*links*/
 a {
-    color: #333;
+    color: #0079a5;
 }
 
 a:hover {
-    color: #000;
+    color: #009ED8;
     text-decoration: underline;
 }
 a.btn.btn-link {
