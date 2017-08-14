@@ -7,8 +7,7 @@ import { PostService } from '../_services/post.service';
   styleUrls: ['./testbench2.component.css']
 })
 export class Testbench2Component implements OnInit {
-  post: any = {};
-
+  post: any = [];
 
   constructor(
     private pstSvc: PostService
@@ -20,7 +19,7 @@ export class Testbench2Component implements OnInit {
   }
 
   newPost(){
-    var usrID = window.localStorage.getItem('userId');
+    var usrID = window.localStorage.getItem('usrId');
     this.pstSvc.create(usrID, this.post.petName, this.post.petBreed, this.post.description);
   }
 }
