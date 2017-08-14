@@ -1,5 +1,7 @@
 <div class="container">
-  <div>
-    {{items}}
-  </div>
+  <ul>
+    <div *ngFor="let item of items">
+      {{item.petName}}
+    </div>
+  </ul>
 </div>

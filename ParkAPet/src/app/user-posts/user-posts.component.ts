@@ -15,11 +15,13 @@ export class UserPostsComponent implements OnInit {
 
   ngOnInit() {
       this.items = [];
-      this.pstSvc.getByUser(window.localStorage.getItem('usrId'), function(data){
-      console.log(data);
-      this.items.push(data);
-      console.log(this.items);
-      return data;
+      var usrpost = this;
+      this.pstSvc.getByUser(usrpost, window.localStorage.getItem('usrId'), function(usrpost, data){
+      var keys = Object.keys(data);
+      keys.forEach(function(key){
+        usrpost.items.push(data[key]);
+      })
+      console.log(usrpost.items);
     });
   }
 

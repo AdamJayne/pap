@@ -1,3 +1,14 @@
+.carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    max-height:500px%;
+    height: auto;
+}
+
+
+
+
+
 .infowrapper {
     position: relative;
     background-color: #333;

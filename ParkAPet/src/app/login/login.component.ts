@@ -9,7 +9,7 @@ import { AlertService, AuthenticationService } from '../_services/index';
     moduleId: module.id,
     selector: 'login-root',
     templateUrl: 'login.component.html',
-    styleUrls: ['login.component.html']
+    styleUrls: ['signin.css']
 })
 
 export class LoginComponent implements OnInit {
