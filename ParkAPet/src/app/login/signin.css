@@ -1,3 +1,29 @@
-h2 {
-    font-size: 80px;
+.login .login-col {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #134F05;
+    width: 500px;
+    height: 700px;
+    min-width: 300px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    padding: 160px 40px 80px 40px;
+    border-radius: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background-color: rgb(232, 232, 232);
+}
+
+input {
+    color: #134F05;
+    background: rgba(0, 0, 0, 0.10);
+    border-top:none;
+    border-right: none;
+    border-left:none;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #134F05;
 }
