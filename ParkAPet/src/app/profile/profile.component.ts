@@ -28,5 +28,6 @@ export class ProfileComponent implements OnInit {
 
         // // get return url from route parameters or default to '/'
         // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+        console.log('starter');
     }
 }
