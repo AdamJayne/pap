@@ -4,8 +4,6 @@ import { FormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 // used to create fake backend
-import { fakeBackendProvider } from './_helpers/index';
-import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
 // Firebase imports
 import { AngularFireModule } from 'angularfire2';
@@ -25,8 +23,6 @@ import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { LandingComponent } from './home/landing/landing.component';
-import { CreateComponent } from './createpost/create.component';
-import { PetPost } from './createpost/petPosts/posts.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateComponent } from './profile/update/update.component';
 import { FooterComponent } from './footer/footer.component';
@@ -50,13 +46,9 @@ import { UserPostsComponent } from './user-posts/user-posts.component';
     declarations: [
         AppComponent,
         NavbarComponent,
-        AlertComponent,
-        HomeComponent,
         LoginComponent,
         RegisterComponent,
         LandingComponent,
-        CreateComponent,
-        PetPost,
         ProfileComponent,
         UpdateComponent,
         FooterComponent,
@@ -75,8 +67,6 @@ import { UserPostsComponent } from './user-posts/user-posts.component';
         AngularFireDatabase,
 
         // providers used to create fake backend
-        fakeBackendProvider,
-        MockBackend,
         BaseRequestOptions
     ],
     bootstrap: [AppComponent]
