@@ -1,5 +1,9 @@
 
+
 <div class="col-6 col-offset-3">
+
+<!-- <div class="col-md-6 col-md-offset-3">
+
     <form>
     <div class="form-group"> 
             <label for="username">Username</label>
@@ -12,11 +16,11 @@
     <label for="firstName">First Name</label>
             <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" required />
             <div *ngIf="f.submitted && !firstName.valid" class="help-block">First Name is required</div>
-        </div>
+        </div> -->
 
       
     <!--Facebook page  -->
-     <div class="form-group" >
+     <!-- <div class="form-group" >
             <label for="facebookProfilePage">Facebook Profile Page</label>
             <input type="text" class="form-control" name="facebookProfilePage" [(ngModel)]="model.facebookProfilePage" #facebookProfilePage="ngModel" required />
             <div *ngIf="f.submitted && !facebookProfilePage.valid" class="help-block">Facebook Profile Page is required</div>
@@ -30,5 +34,6 @@
     </form>
 
     <a href="/update" class="button">Update My Profile</a>
-</div>
-
+</div> -->
+<app-user-posts></app-user-posts>
+  

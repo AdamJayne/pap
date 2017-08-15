@@ -12,7 +12,6 @@ export class PostService {
     ) {
         this.post = afd.object('/post');
         this.posts = this.afd.list('/post');
-        console.log(this.getAll());
     }
     // create
     create(userId, name, breed, description){
@@ -21,23 +20,34 @@ export class PostService {
         this.post = this.afd.object('/post/' + blar.petName);
         this.post.set(blar).then(()=>{
             console.log("Worked");
-        })
+        });
     }
     // getAllPosts
-    getAll(): Post[] {
-        let out: Post[] = new Array<Post>();
+
+    getEmAll(){
+        var out = []
         this.posts.forEach(item => {
-            item.forEach(post => out.push(post));
-        });
-        return out;
+            item.forEach(post=> out.push(post))
+        })
+        return out
+
+    }
+    getAll() {
+        return this.posts;
     }
     // getUserPosts
-    getByUser(userId, callback){
+    getByUser(usrpost, userId, callback){
         this.afd.database.ref('/post').orderByChild('usrID').equalTo(userId).on("value", function(snapshot){
             console.log(snapshot.val())
-            callback(snapshot.val())
+            callback(usrpost, snapshot.val())
         })
     }
     // update
+    updatePost(postName, updateData){
+        this.afd.object(postName).update(updateData).then(function(){console.log('Updated data!');})
+    }
     // delete
+    deletePost(postName){
+        this.afd.object(postName).remove().then(function(){console.log('done');})
+    }
 }

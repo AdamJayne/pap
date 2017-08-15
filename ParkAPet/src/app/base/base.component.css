@@ -1,0 +1,24 @@
+.navbar-brand {
+    font-family: Helvetica, Helvetica, Arial, bold, sans-serif;
+    color: #fff;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 24px;
+    letter-spacing: -2px;
+    line-height: 20px;
+   -webkit-font-smoothing: antialiased;
+}
+
+/* a {
+    color: #333;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+a.btn.btn-link {
+    color: pink;
+    text-decoration: underline;
+} */

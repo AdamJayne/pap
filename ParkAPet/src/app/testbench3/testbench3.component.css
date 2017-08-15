@@ -1,0 +1,16 @@
+#postItem {
+    
+}
+
+#petHead {
+    background-color: #e9e5ff;
+    padding: 10px;
+    width: 90%;
+}
+
+#petBod {
+    background-color: #f8f7ff;
+    border-bottom: solid 2px #ADA1EB;
+    padding: 10px;
+      width: 90%;
+}
