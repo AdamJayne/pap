@@ -9,6 +9,6 @@ export const environment = {
     apiKey: "AIzaSyDwH8kSn06Sy2qM_hnD6BQ6zIG9to3oheg",
     authDomain: "parkapet-75ae0.firebaseapp.com",
     databaseURL: "https://parkapet-75ae0.firebaseio.com",
-    storageBucket: ""
+    storageBucket: "gs://parkapet-75ae0.appspot.com"
   }
 };

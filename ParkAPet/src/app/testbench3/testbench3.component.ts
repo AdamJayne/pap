@@ -20,7 +20,5 @@ export class Testbench3Component implements OnInit {
   ngOnInit() {
     this.items = [];
     this.items = this.pstSvc.getAll();
-    console.log(this.items);
   }
- 
 }

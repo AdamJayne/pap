@@ -29,6 +29,7 @@ import { TestbenchComponent } from './testbench/testbench.component';
 import { Testbench2Component } from './testbench2/testbench2.component';
 import { Testbench3Component } from './testbench3/testbench3.component';
 import { PostService } from './_services/post.service';
+import { ImageService } from './_services/imgupload.service';
 import { FileUploader } from 'ng2-file-upload';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { UpdatePostComponent } from './update-post/update-post.component';
@@ -64,6 +65,7 @@ import { UpdatePostComponent } from './update-post/update-post.component';
         AuthenticationService,
         UserService,
         PostService,
+        ImageService,
         AngularFireAuth,
         AngularFireDatabase,
 
