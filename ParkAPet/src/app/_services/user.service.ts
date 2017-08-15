@@ -53,7 +53,7 @@ export class UserService {
         return this.uid;
     }
     
-    constructor( private afa: AngularFireAuth, private router: Router) {
+    constructor( private afa: AngularFireAuth, private afd: AngularFireDatabase, private router: Router) {
         //Subscribe to the firebase authentication state
         this.afa.authState.subscribe((authState) => {
             this.authState = authState

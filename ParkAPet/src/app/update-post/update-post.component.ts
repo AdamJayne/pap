@@ -8,13 +8,11 @@ import { PostService } from '../_services/post.service';
 })
 export class UpdatePostComponent implements OnInit {
   upDat: any = [];
-  
+
   constructor( private pstSvc: PostService ) { }
 
   ngOnInit() {
   }
 
-  update(postID){
-    this.pstSvc.updatePost(postID, this.upDat)
-  }
+  
 }
