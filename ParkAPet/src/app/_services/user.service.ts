@@ -7,6 +7,10 @@ import { User } from '../_helpers/_models/index';
 
 @Injectable()
 export class UserService {
+    authState;
+    uid;
+    authed;
+
     signup(email: string, password: string){
         this.afa.auth.createUserWithEmailAndPassword(email, password)
             .then((response) => {
@@ -30,8 +34,23 @@ export class UserService {
     signout(){
         localStorage.clear();
     }
-    constructor(
-        private afa: AngularFireAuth,
-        private router: Router
-    ) {}
+
+    isAuthed(){
+        //returns the authstate
+        return !!this.authState;
+    }
+    getUid(){
+        return this.uid;
+    }
+    
+    constructor( private afa: AngularFireAuth, private router: Router) {
+        //Subscribe to the firebase authentication state
+        this.afa.authState.subscribe((authState) => {
+            this.authState = authState
+        })
+        this.afa.auth.onAuthStateChanged((authData) => {
+            this.uid = authData.uid;
+         })
+
+        }
 }
