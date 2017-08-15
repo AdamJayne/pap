@@ -18,7 +18,7 @@
      </ul>
 
         <ul *ngIf="authed()" class="nav navbar-nav navbar-right">
-          <li><a href="#" (click)="signout()">Sign Out</a></li>
+          <li><a routerLink="/logout" (click)="signout()">Sign Out</a></li>
           <li><a routerLink="/profile">PROFILE</a></li>
 
         <!-- <li><a href="/login">LOGIN</a></li>

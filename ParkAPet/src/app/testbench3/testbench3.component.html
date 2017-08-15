@@ -1,16 +1,18 @@
-<br>
+<br><br>
 <div class="container">
-    <div *ngFor="let post of items | async" id="postItem">
-      <div class="row">
-        <div id="petHead">
-          <h2>
-            {{post.petName}}
-          </h2>
-          <img src="{{post.image}}">
-          <p>{{post.petBreed}}</p>
-        </div>
-        <div id="petBod">
-          {{post.description}}
+    <div *ngFor="let post of items | async" id="postItem" class="post">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-4" id="petHead">
+              <img src="{{post.image}}">
+            <h2>
+              {{post.petName}}
+            </h2>
+          </div>
+           <div class="col-8" id="petBod">
+              <p>{{post.petBreed}}</p>
+            {{post.description}}
+          </div>
         </div>
       </div>
     </div> 
