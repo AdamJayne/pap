@@ -14,13 +14,11 @@ export class PostService {
         this.posts = this.afd.list('/post');
     }
     // create
-    create(userId, name, breed, description){
+    create(userId, name, breed, description, image){
         // this.afd.database.ref('posts/'+)
-        var blar = new Post(userId, name, breed, description);
+        var blar = new Post(userId, name, breed, description, image);
         this.post = this.afd.object('/post/' + blar.petName);
-        this.post.set(blar).then(()=>{
-            console.log("Worked");
-        });
+        this.post.set(blar);
     }
     // getAllPosts
 
@@ -38,7 +36,6 @@ export class PostService {
     // getUserPosts
     getByUser(usrpost, userId, callback){
         this.afd.database.ref('/post').orderByChild('usrID').equalTo(userId).on("value", function(snapshot){
-            console.log(snapshot.val())
             callback(usrpost, snapshot.val())
         })
     }
