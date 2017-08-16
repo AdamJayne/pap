@@ -12,3 +12,19 @@
     color: black;
     background: lavender;
 }
+
+label {
+  display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    color: #1C1F35;
+    letter-spacing: 2px;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+input#image-input {
+    background-color: #000;
+}
