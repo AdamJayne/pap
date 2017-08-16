@@ -13,11 +13,15 @@
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     
     <ul *ngIf="!authed()" class="nav navbar-nav navbar-right">
+        <a class="navbar-brand" href="#">PARK-A-PET</a>
         <li><a routerLink="/login">LOGIN</a></li>
         <li><a routerLink="/register">REGISTER</a></li>
      </ul>
 
         <ul *ngIf="authed()" class="nav navbar-nav navbar-right">
+
+          <a class="navbar-brand" href="#">PARK-A-PET</a>
+          <li><a href="#" (click)="signout()">LOG OUT</a></li>
           <li><a routerLink="/logout" (click)="signout()">Sign Out</a></li>
           <li><a routerLink="/profile">PROFILE</a></li>
 
@@ -27,7 +31,7 @@
 
         <li><a [routerLink]="['/new']">+ NEW POST</a></li> -->
 
-        <li><a [routerLink]="['/posts']">+ NEW POST</a></li>
+        <li><a [routerLink]="['/posts']">+ POST</a></li>
 
      </ul>
    </div>
