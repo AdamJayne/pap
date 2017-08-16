@@ -1,15 +1,12 @@
 
+
 <body class="login" id="login">
   <div class="container">
     <div class="row">
       <div class="login-col">
-        <img class="in-logo" src="/resources/img/leaflogo.png" alt="pic here">
-    <h2>LOGIN</h2>
+        <img class="in-logo" src="https://image.ibb.co/dJSisF/papalarge1.png" alt="pic here" style="width:350px; height:350px;">
+ 
 
-
-
-
-    <br><br><br>
     <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
             <label for="username">Email</label>
