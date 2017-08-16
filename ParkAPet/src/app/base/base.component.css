@@ -1,5 +1,5 @@
 .navbar-brand {
-    font-family: Helvetica, Helvetica, Arial, bold, sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: #fff;
     float: left;
     height: 50px;
@@ -8,6 +8,35 @@
     letter-spacing: -2px;
     line-height: 20px;
    -webkit-font-smoothing: antialiased;
+}
+
+.navbar-inverse {
+background-color: #333;
+position: fixed;
+width:100%;
+border-top: #333;
+     }
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: none;
+    width:90%;
+    position: fixed;
+    background-color: #333;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: none;
+    position: fixed;
+    background-color: #333;
+}
+
+.container-fluid {
+    background-color: #333;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    position:fixed;
 }
 
 /* a {

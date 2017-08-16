@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from '../_services/post.service';
 
 @Component({
   selector: 'app-update-post',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./update-post.component.css']
 })
 export class UpdatePostComponent implements OnInit {
+  upDat: any = [];
 
-  constructor() { }
+  constructor( private pstSvc: PostService ) { }
 
   ngOnInit() {
   }
 
+  
 }

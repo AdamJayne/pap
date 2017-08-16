@@ -12,7 +12,6 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
-
 import { AppComponent }  from './app.component';
 import { appRoutes } from './app.routing';
 import { NavbarComponent } from './base/base.component';
@@ -29,6 +28,7 @@ import { TestbenchComponent } from './testbench/testbench.component';
 import { Testbench2Component } from './testbench2/testbench2.component';
 import { Testbench3Component } from './testbench3/testbench3.component';
 import { PostService } from './_services/post.service';
+import { ImageService } from './_services/imgupload.service';
 import { FileUploader } from 'ng2-file-upload';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { UpdatePostComponent } from './update-post/update-post.component';
@@ -40,7 +40,7 @@ import {Submit} from './contactus/submit.component';
         BrowserModule,
         FormsModule,
         HttpModule,
-        RouterModule.forRoot(appRoutes),
+        RouterModule.forRoot(appRoutes, {useHash: true}),
         AngularFireModule.initializeApp(environment.firebase),
         AngularFireDatabaseModule,
         AngularFireAuthModule
@@ -68,6 +68,7 @@ import {Submit} from './contactus/submit.component';
         AuthenticationService,
         UserService,
         PostService,
+        ImageService,
         AngularFireAuth,
         AngularFireDatabase,
 

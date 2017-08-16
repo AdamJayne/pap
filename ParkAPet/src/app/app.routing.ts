@@ -14,14 +14,11 @@ import {Submit} from './contactus/submit.component';
 export const appRoutes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: '', component: LandingComponent},
-    { path: 'posts', component: TestbenchComponent},
+    { path: '', redirectTo: 'landing', pathMatch: 'full'},
+    { path: 'posts', component: TestbenchComponent, canActivate:[AuthGuard]},
     { path: 'profile', component: ProfileComponent},
-    { path: 'update', component: UpdateComponent },
     { path: 'contact', component: ContactUs},
     { path: 'submit', component: Submit},
-
-
-    // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+    { path: 'update', component: UpdateComponent, canActivate:[AuthGuard] },
+    { path: 'landing', component: LandingComponent}
 ];
