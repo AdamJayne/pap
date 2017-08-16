@@ -12,7 +12,6 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
-
 import { AppComponent }  from './app.component';
 import { appRoutes } from './app.routing';
 import { NavbarComponent } from './base/base.component';
@@ -39,7 +38,7 @@ import { UpdatePostComponent } from './update-post/update-post.component';
         BrowserModule,
         FormsModule,
         HttpModule,
-        RouterModule.forRoot(appRoutes),
+        RouterModule.forRoot(appRoutes, {useHash: true}),
         AngularFireModule.initializeApp(environment.firebase),
         AngularFireDatabaseModule,
         AngularFireAuthModule

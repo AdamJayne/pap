@@ -12,12 +12,9 @@ import { TestbenchComponent } from './testbench/testbench.component'
 export const appRoutes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: '', component: LandingComponent},
-    { path: 'posts', component: TestbenchComponent},
+    { path: '', redirectTo: 'landing', pathMatch: 'full'},
+    { path: 'posts', component: TestbenchComponent, canActivate:[AuthGuard]},
     { path: 'profile', component: ProfileComponent},
-    { path: 'update', component: UpdateComponent },
-
-
-    // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+    { path: 'update', component: UpdateComponent, canActivate:[AuthGuard] },
+    { path: 'landing', component: LandingComponent}
 ];
