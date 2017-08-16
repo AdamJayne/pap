@@ -32,6 +32,8 @@ import { PostService } from './_services/post.service';
 import { FileUploader } from 'ng2-file-upload';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { UpdatePostComponent } from './update-post/update-post.component';
+import {ContactUs} from './contactus/contact.component';
+import {Submit} from './contactus/submit.component';
 
 @NgModule({
     imports: [
@@ -56,7 +58,9 @@ import { UpdatePostComponent } from './update-post/update-post.component';
         Testbench2Component,
         Testbench3Component,
         UserPostsComponent,
-        UpdatePostComponent
+        UpdatePostComponent,
+        ContactUs,
+        Submit
     ],
     providers: [
         AuthGuard,
