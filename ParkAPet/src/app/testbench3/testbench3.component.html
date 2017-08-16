@@ -1,15 +1,15 @@
 <br><br>
 <div class="container">
-    <div *ngFor="let post of items | async" id="postItem" class="post">
+    <div *ngFor="let post of items | async" class="post">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-4" id="petHead">
+          <div class="col-sm-4 petHead">
               <img src="{{post.image}}">
             <h2>
               {{post.petName}}
             </h2>
           </div>
-           <div class="col-8" id="petBod">
+           <div class="col-sm-8 petBod">
               <p>{{post.petBreed}}</p>
             {{post.description}}
           </div>

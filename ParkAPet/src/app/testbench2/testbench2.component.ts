@@ -17,17 +17,13 @@ export class Testbench2Component implements OnInit {
   ngOnInit() {}
   newPost(){
     var usrID = window.localStorage.getItem('usrId');
-    if(usrID != null){
-      if(this.el.nativeElement.files[0]){
-        this.is.uploadPostImg(this.el.nativeElement.files[0], usrID + this.post.petName, (snap, err)=>{
-          if(err){
-            return console.log(err);
-          }
-          this.pstSvc.create(usrID, this.post.petName, this.post.petBreed, this.post.description, snap.downloadURL);
-        })
-      }
-    } else {
-      console.log('you must be logged in to post');
+    if(this.el.nativeElement.files[0]){
+      this.is.uploadPostImg(this.el.nativeElement.files[0], usrID + this.post.petName, (snap, err)=>{
+        if(err){
+          return console.log(err);
+        }
+        this.pstSvc.create(usrID, this.post.petName, this.post.petBreed, this.post.description, snap.downloadURL);
+      })
     }
   }
 }
