@@ -109,7 +109,8 @@ input:-webkit-autofill:focus {
 /*landing page sections*/
 	#main {
 		position: relative;
-    background-color: #333;
+    background-image: url('https://static.pexels.com/photos/412537/pexels-photo-412537.jpeg');
+    width: 100%;
 		color: #fff;
 		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.4);
 		text-align: ;
@@ -128,7 +129,8 @@ input:-webkit-autofill:focus {
     padding-bottom: 100px;
     padding-top: 100px;
 		margin: 0;
-		background-size: 125% auto;
+    width:100%;
+		background-size: 100% auto;
 }
 
 	#greendog {
@@ -532,7 +534,7 @@ arrow {
     padding: 15px 65px;
     transition: all .3s ease-in-out;
     text-transform: uppercase;
-    background-color: rgba(255,255,255,0);
+    background-color: rgb(255,255,255);
     color: #139675;
     border: 1px solid #139675;
     border-radius: 100px;

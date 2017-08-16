@@ -4,9 +4,10 @@
   <div class="container">
     <div class="row">
       <div class="login-col">
-        <img class="in-logo" src="https://image.ibb.co/dJSisF/papalarge1.png" alt="pic here" style="width:350px; height:350px;">
+<br><br><br>
+        <img class="in-logo" src="https://image.ibb.co/dJSisF/papalarge1.png" alt="pic here" style="width:250px; height:250px;">
  
-
+<br><br><br><br>
     <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
             <label for="username">Email</label>
@@ -30,7 +31,7 @@
     
            <br><br>
            <p style="color:#fff">Don't have an account?
-            <a [routerLink]="['/register']" class="btn btn-link">Register</a></p>
+            <a [routerLink]="['/register']" class="btn btn-link">Create one!</a></p>
           
         </div>
     </form>
