@@ -1,16 +1,16 @@
-#postItem {
-    
+.post {
+    margin-top: 20px;
 }
 
-#petHead {
+.petHead {
     background-color: #e9e5ff;
-    padding: 10px;
-    width: 90%;
 }
 
-#petBod {
+.petBod {
     background-color: #f8f7ff;
     border-bottom: solid 2px #ADA1EB;
-    padding: 10px;
-      width: 90%;
+}
+img {
+    border-radius: 100%;
+    border: 1px solid black;
 }
