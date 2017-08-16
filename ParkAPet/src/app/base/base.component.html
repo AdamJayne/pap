@@ -11,26 +11,14 @@
      <a class="navbar-brand" href="#">PARK A PET</a>
    </div>
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    
-    <ul *ngIf="!authed()" class="nav navbar-nav navbar-right">
-        <!-- <a class="navbar-brand" href="#">PARK-A-PET</a> -->
+      <ul *ngIf="!authed()" class="nav navbar-nav navbar-right">
         <li><a routerLink="/login">Sign In</a></li>
         <li><a routerLink="/register">Register</a></li>
-     </ul>
-
-        <ul *ngIf="authed()" class="nav navbar-nav navbar-right"
-          <!-- <a class="navbar-brand" href="#">PARK-A-PET</a> -->
-          <li><a routerLink="/logout" (click)="signout()">Sign Out</a></li>
-          <li><a routerLink="/profile">Profile</a></li>
-
-        <!-- <li><a href="/login">LOGIN</a></li>
-        <li><a href="/register">REGISTER</a></li>
-        <li><a [routerLink]="['/login']">LOGOUT</a></li>
-
-        <li><a [routerLink]="['/new']">+ NEW POST</a></li> -->
-
+      </ul>
+      <ul *ngIf="authed()" class="nav navbar-nav navbar-right">
+        <li><a routerLink="/logout" (click)="signout()">Sign Out</a></li>
+        <li><a routerLink="/profile">Profile</a></li>
         <li><a [routerLink]="['/posts']">Posts</a></li>
-
      </ul>
    </div>
  </div>

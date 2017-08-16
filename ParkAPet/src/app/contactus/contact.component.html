@@ -3,7 +3,7 @@
    
      <div class="new-message">
          
-        <form #f='ngForm' (ngSubmit)='onSubmit(f)'>
+        <form #f='ngForm' (ngSubmit)='onSubmit()'>
         
             <p>Enter Name:</p>
             <input name='userName' type="text" [(ngModel)]='model.name' required>
@@ -13,7 +13,7 @@
 <br><br>
             <div align="right">
             <!-- <button [disabled]="loading" class="button  email">Submit</button> -->
-             <a href="/submit" class="button">Submit Request</a> 
+             <a href="/#/submit" class="button">Submit Request</a> 
            </div>
            <br>
             <br>
