@@ -11,6 +11,7 @@ export class UserService {
     authState;
     uid;
     authed;
+    currentuser;
 
     user: FirebaseObjectObservable<any>;
 
@@ -18,7 +19,7 @@ export class UserService {
 
         this.afa.auth.createUserWithEmailAndPassword(email, password)
             .then((response) => {
-                var using = new User(fName, lName)
+                var using = new User(fName, lName, email)
                 console.log("Signed Up!");
                 localStorage.setItem('userId', response.uid);
                 this.user = this.afd.object('/user/'+ response.uid);
@@ -42,7 +43,12 @@ export class UserService {
     }
     signout(){
         localStorage.clear();
+        this.router.navigateByUrl('landing');
         this.afa.auth.signOut();
+    }
+
+    getProfile(uid){
+        this.currentuser = this.afd.object('/user/'+uid);
     }
 
     isAuthed(){

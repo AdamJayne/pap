@@ -1,7 +1,6 @@
 .navbar-brand {
     font-family: 'Nunito', sans-serif;
     color: #fff;
-    float: left;
     height: 50px;
     padding: 15px 15px;
     font-size: 24px;
@@ -9,34 +8,35 @@
     line-height: 20px;
    -webkit-font-smoothing: antialiased;
 }
-
+    
 .navbar-inverse {
-background-color: #333;
-position: fixed;
-width:100%;
-border-top: #333;
-     }
+    background-color: #333;
+    top: -2px;
+    position: fixed;
+    width:100%; 
+    border: none;
+}
 
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+/* .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     border-color: none;
     width:90%;
     position: fixed;
     background-color: #333;
-}
+} */
 
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+/* .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     border-color: none;
     position: fixed;
     background-color: #333;
-}
-
+} */
+ 
 .container-fluid {
-    background-color: #333;
+    /* background-color: #333;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto;
-    position:fixed;
+    margin-left: auto; */
+    /* position:fixed; */
 }
 
 /* a {
