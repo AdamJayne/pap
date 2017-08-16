@@ -20,15 +20,14 @@
 
         <ul *ngIf="authed()" class="nav navbar-nav navbar-right">
 
-<<<<<<< HEAD
           <!-- <a class="navbar-brand" href="#">PARK-A-PET</a> -->
           <li><a routerLink="/logout" (click)="signout()">Sign Out</a></li>
           <li><a routerLink="/profile">Profile</a></li>
-=======
-          <a class="navbar-brand" href="#">PARK A PET</a>
-          <li><a routerLink="/logout" (click)="signout()">LOGOUT</a></li>
-          <li><a routerLink="/profile">PROFILE</a></li>
->>>>>>> bb8ce7b98eb0d1fd602290f452afe20cfbcb1e48
+
+        <ul *ngIf="authed()" class="nav navbar-nav navbar-right"
+          <!-- <a class="navbar-brand" href="#">PARK-A-PET</a> -->
+          <li><a routerLink="/logout" (click)="signout()">Sign Out</a></li>
+          <li><a routerLink="/profile">Profile</a></li>
 
         <!-- <li><a href="/login">LOGIN</a></li>
         <li><a href="/register">REGISTER</a></li>
