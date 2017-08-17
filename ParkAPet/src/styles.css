@@ -109,7 +109,8 @@ input:-webkit-autofill:focus {
 /*landing page sections*/
 	#main {
 		position: relative;
-    background-color: #333;
+    background-image: url('https://static.pexels.com/photos/412537/pexels-photo-412537.jpeg');
+    width: 100%;
 		color: #fff;
 		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.4);
 		text-align: ;
@@ -128,7 +129,8 @@ input:-webkit-autofill:focus {
     padding-bottom: 100px;
     padding-top: 100px;
 		margin: 0;
-		background-size: 125% auto;
+    width:100%;
+		background-size: 100% auto;
 }
 
 	#greendog {
@@ -168,6 +170,25 @@ input:-webkit-autofill:focus {
 		background-size: 125% auto;
     padding-bottom: 60px;
 }
+
+
+.profile-col {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #134F05;
+    width: 500px;
+    height: 800px;
+    min-width: 300px;
+    border-radius: 15px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding: 20px 40px 80px 40px;
+    border-radius: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background-color: rgb(232, 232, 232);
+}
+
 
 
 .inline {
@@ -532,7 +553,7 @@ arrow {
     padding: 15px 65px;
     transition: all .3s ease-in-out;
     text-transform: uppercase;
-    background-color: rgba(255,255,255,0);
+    background-color: rgb(255,255,255);
     color: #139675;
     border: 1px solid #139675;
     border-radius: 100px;

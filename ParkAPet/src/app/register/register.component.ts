@@ -20,7 +20,7 @@ export class RegisterComponent {
         private alertService: AlertService) { }
 
     register() {
-        this.userService.signup(this.model.username, this.model.password);
+        this.userService.signup(this.model.email, this.model.password, this.model.firstName, this.model.lastName);
         // this.loading = true;
         // this.userService.create(this.model)
         //     .subscribe(

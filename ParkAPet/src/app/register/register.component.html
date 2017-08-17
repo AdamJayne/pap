@@ -4,9 +4,10 @@
     <div class="row">
       <div class="register-col">
 
-<div class="col-md-6 col-md-offset-3">
-    <h2>CREATE A NEW ACCOUNT</h2>
-    <br><br>
+<div>
+<br><br><br>
+    <img class="in-logo" src="https://image.ibb.co/eZFxKv/papalarge_signup.png" alt="pic here" style="width:250px; height:250px;">
+<br><br><br><br>
     <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
             <label for="firstName">First Name</label>
@@ -18,10 +19,10 @@
             <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" required />
             <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last Name is required</div>
         </div>
-        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
-            <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #username="ngModel" required />
+            <div *ngIf="f.submitted && !email.valid" class="help-block">Emial is required</div>
         </div>
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
             <label for="password">Password</label>

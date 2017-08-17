@@ -1,0 +1,29 @@
+<div class="sidebar">
+<div class="contact-div">
+   <br><br><br>
+   <div class="contact-col">
+     <div class="new-message">
+         <br><br>
+        <form #f='ngForm' (ngSubmit)='onSubmit()'>
+    <div align="center">
+        <i class="fa fa-envelope" aria-hidden="true" style="font-size:40px"></i>
+        <h3>Contact Our Team</h3>
+    </div>
+        <hr>
+            <p>Enter Name:</p>
+            <input name='userName' type="text" [(ngModel)]='model.name' required>
+           
+            <p>Please leave your message here:</p>
+            <textarea name='description' placeholder='Hello PAP Team! May you please help me out with.....? Thank you!' [(ngModel)]='model.description' required></textarea>
+<br><br>
+            <div align="right">
+            <!-- <button [disabled]="loading" class="button  email">Submit</button> -->
+             <a href="/#/submit" class="button">Submit Request</a> 
+            
+           </div>
+        </form>
+       </div>
+    </div>
+</div>
+
+

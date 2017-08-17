@@ -1,6 +1,12 @@
-
+<br><br><br><br>
   <h1>Post Form</h1>
+  <br><br>
   <form #postForm="ngForm" (ngSubmit)="newPost()">
+    <div class="form-group" show-errors>
+      <label for="title">Upload Image</label>
+      <img *ngIf='img' [src]='img' />
+      <input #imgInput name="image-upload" type="file" accept="image/png, image/jpeg, image/jpg" id="image-upload">
+    </div>
     <div class="form-group">
       <label for="name">Pet Name</label>
       <input type="text" [(ngModel)]="post.petName" name="petName" class="form-control" id="name" required>
@@ -13,5 +19,5 @@
       <label for="description">Description:</label>
       <textarea [(ngModel)]="post.description" name="description" id="description" rows="10" #description="ngModel"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Post</button>
+    <button type="submit" class="button email">Post</button>
   </form>
