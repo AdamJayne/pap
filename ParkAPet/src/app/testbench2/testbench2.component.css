@@ -27,4 +27,11 @@ label {
 
 input#image-input {
     background-color: #000;
+    height:150px;
+    width:150px;
+}
+
+img {
+    height:150px;
+    width:150px;
 }
