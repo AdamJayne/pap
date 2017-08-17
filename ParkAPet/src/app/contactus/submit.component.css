@@ -1,8 +1,20 @@
 p{
-    color: #fff;
+    color: #FFF;
 }
 
-.container {
-    background: #125922;
-    margin-top: 70px;
+.contact-col {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    min-width: 300px;
+    border-radius: 15px;
+    margin-top: 200px;
+    margin-bottom: 350px;
+    padding: 20px 40px 20px 40px;
+    border-radius: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background-color:#00bbeb;
+
 }
