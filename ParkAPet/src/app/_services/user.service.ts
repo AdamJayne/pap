@@ -21,7 +21,7 @@ export class UserService {
             .then((response) => {
                 var using = new User(fName, lName, email)
                 console.log("Signed Up!");
-                localStorage.setItem('userId', response.uid);
+                localStorage.setItem('usrId', response.uid);
                 this.user = this.afd.object('/user/'+ response.uid);
                 this.user.set(using).then(()=> {
                     console.log("User Created!");
