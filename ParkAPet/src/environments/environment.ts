@@ -6,9 +6,18 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyDwH8kSn06Sy2qM_hnD6BQ6zIG9to3oheg",
-    authDomain: "parkapet-75ae0.firebaseapp.com",
-    databaseURL: "https://parkapet-75ae0.firebaseio.com",
-    storageBucket: "gs://parkapet-75ae0.appspot.com"
+    apiKey: "AIzaSyAq32GUspndEsB4xr8YNM7xgXvuRSjsBAk",
+    authDomain: "parkapet-af0c9.firebaseapp.com",
+    databaseURL: "https://parkapet-af0c9.firebaseio.com",
+    projectId: "parkapet-af0c9",
+    storageBucket: "parkapet-af0c9.appspot.com",
+    messagingSenderId: "182504808032"
+
   }
 };
+
+
+  // apiKey: "AIzaSyDwH8kSn06Sy2qM_hnD6BQ6zIG9to3oheg",
+  //   authDomain: "parkapet-75ae0.firebaseapp.com",
+  //   databaseURL: "https://parkapet-75ae0.firebaseio.com",
+  //   storageBucket: "gs://parkapet-75ae0.appspot.com"
