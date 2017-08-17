@@ -13,7 +13,7 @@ import { UserService } from '../_services/user.service';
 })
 
 export class ProfileComponent implements OnInit {
-    thisUser;
+    thisUser: any = {};
 
     constructor(
         private route: ActivatedRoute,
@@ -29,7 +29,12 @@ export class ProfileComponent implements OnInit {
 
         // // get return url from route parameters or default to '/'
         // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-        this.thisUser = [];
-        this.usrSvc.getProfile(window.localStorage.getItem('userId'));
+
+        this.usrSvc.getProfile(window.localStorage.getItem('usrId'), (data)=>{
+            var keys = Object.keys(data);
+            console.log(keys);
+            this.thisUser = (data[keys[0]]);
+            console.log(data[keys[0]])
+        });
     }
 }
