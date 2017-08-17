@@ -47,8 +47,11 @@ export class UserService {
         this.afa.auth.signOut();
     }
 
-    getProfile(uid){
-        this.currentuser = this.afd.object('/user/'+uid);
+    getProfile(usrid, callback){
+        this.afd.database.ref('/user').orderByKey().equalTo(usrid).on('value', function(snapshot){
+            console.log(snapshot.val());
+            callback(snapshot.val());
+        })
     }
 
     isAuthed(){
