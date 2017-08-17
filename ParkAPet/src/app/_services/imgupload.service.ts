@@ -17,7 +17,7 @@ export class ImageService {
     }
 
     uploadPostImg(img: any,id:string, cb?:(snapshot:firebase.storage.UploadTaskSnapshot,err?:Error)=>null|void){
-        this.Storage.ref('/postImage/'+ id).put(img).then((snap)=>{
+        this.Storage.ref('/PostImage/'+ id).put(img).then((snap)=>{
             if(cb){
                 cb(snap,null)
             }

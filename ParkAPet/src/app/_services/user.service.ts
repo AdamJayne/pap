@@ -21,7 +21,7 @@ export class UserService {
             .then((response) => {
                 var using = new User(fName, lName, email)
                 console.log("Signed Up!");
-                localStorage.setItem('userId', response.uid);
+                localStorage.setItem('usrId', response.uid);
                 this.user = this.afd.object('/user/'+ response.uid);
                 this.user.set(using).then(()=> {
                     console.log("User Created!");
@@ -47,8 +47,11 @@ export class UserService {
         this.afa.auth.signOut();
     }
 
-    getProfile(uid){
-        this.currentuser = this.afd.object('/user/'+uid);
+    getProfile(usrid, callback){
+        this.afd.database.ref('/user').orderByKey().equalTo(usrid).on('value', function(snapshot){
+            console.log(snapshot.val());
+            callback(snapshot.val());
+        })
     }
 
     isAuthed(){
