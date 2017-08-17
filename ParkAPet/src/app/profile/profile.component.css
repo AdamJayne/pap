@@ -1,79 +1,43 @@
 
-#ProfilePage
-{
-    /* Move it off the top of the page, then centre it horizontally */
-    margin: 50px auto;
-    width: 635px;
 
-/* For visibility. Delete me */
-border: 1px solid red;
+.profile-col {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    color: #134F05;
+    width: 500px;
+    height: 500px;
+    min-width: 300px;
+    border-radius: 15px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding: 20px 40px 80px 40px;
+    border-radius: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background-color: rgb(232, 232, 232);
 }
 
-#LeftCol
-{
-    /* Move it to the left */
-    float: left;
-
-    width: 200px;
-    text-align: center;
-
-    /* Move it away from the content */
-    margin-right: 20px;
-
-/* For visibility. Delete me */
-border: 1px solid red;
+input {
+    color: #134F05;
+    background: rgba(0, 0, 0, 0.10);
+    border-top:none;
+    border-right: none;
+    border-left:none;
+    margin-bottom: 10px;
 }
 
-#Photo
-{
-    /* Width and height of photo container */
-    width: 200px;
-    height: 200px;
-
-/* For visibility. Delete me */
-border: 1px solid red;
+p {
+    color: #134F05;
 }
 
-#PhotoOptions
-{
-    text-align: center;
-    width: 200px;
-
-/* For visibility. Delete me */
-border: 1px solid brown;
-}
-
-#Info
-{
-    width: 400px;
-    text-align: center;
-
-    /* Move it to the right */
-    float: right;
-
-/* For visibility. Delete me */
-border: 1px solid blue;
-}
-
-#Info strong
-{
-    /* Give it a width */
+label {
     display: inline-block;
-    width: 100px;
-
-/* For visibility. Delete me */
-border: 1px solid orange;
-}
-
-#Info span
-{
-    /* Give it a width */
-    display: inline-block;
-    width: 250px;
-
-/* For visibility. Delete me */
-border: 1px solid purple;
-}
-label{
-    color:whitesmoke;
+    font-family: 'Nunito', sans-serif;
+    color: #1C1F35;
+    letter-spacing: 2px;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 0;
+    font-size: 11px;
+    text-transform: uppercase;
 }
