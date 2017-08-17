@@ -4,10 +4,14 @@
     <div class="info">
         <h3>navigate</h3><br>
         <ul style="list-style-type: none">
-            <li><a href="/">home</a></li><br>
-            <li><a href="/login">login</a></li><br>
-            <li><a href="/posts">view new posts</a></li><br>
-            <li><a href="/profile">profile</a></li>
+       <li> <a [routerLink]="['/#']" class="btn btn-link">home</a>
+       </li>
+       <li> <a [routerLink]="['/posts']" class="btn btn-link">view new posts</a>
+       </li>
+       <li> <a [routerLink]="['/profile']" class="btn btn-link">view profile</a>
+       </li>
+       <li> <a [routerLink]="['/login']" class="btn btn-link">login</a>
+       </li>
 
         </ul>
 
@@ -28,7 +32,7 @@
         <h3>info</h3>
         <ul style="list-style-type: none">
             <li>
-        <a href="https://github.com/AdamJayne/pap/tree/master/ParkAPet">
+        <a href="https://github.com/AdamJayne/pap/tree/master/ParkAPet" target="_blank">
         <img class="in-logo" src="https://image.ibb.co/jjc8sF/papa_viewbutton.png" alt="pic here" style="width:190px; height:80px;opacity: 2;">
         </a>
         </li><br>
@@ -36,13 +40,13 @@
         <hr>
      
         <h3>Contributors Bio</h3>
-            <li><a href="https://adamjayne.github.io/#/">adam</a>
+            <li><a href="https://adamjayne.github.io/#/" target="_blank">adam</a>
 
             </li>
-            <li><a href="https://eakmayev.github.io/">emiliya</a>
+            <li><a href="https://eakmayev.github.io/" target="_blank">emiliya</a>
 
             </li>
-            <li><a href="https://elenalonestarr.github.io/">elena</a>
+            <li><a href="https://elenalonestarr.github.io/" target="_blank">elena</a>
             </li>
 
         </ul>
