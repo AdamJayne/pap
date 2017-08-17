@@ -24,5 +24,4 @@ export class UserPostsComponent implements OnInit {
       console.log(usrpost.items);
     });
   }
-
 }
