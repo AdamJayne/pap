@@ -1,9 +1,24 @@
+<div class="profile-col">
 <div class="container" id="thiscontainer">
+    <i class="fa fa-user-circle" aria-hidden="true"></i>
+    <br><br><br>
+    <h1>My Profile</h1>
+    <hr>
     <label for="name">Name:</label>
     <h3>{{thisUser.firstName}} {{thisUser.lastName}}
     </h3>
-    <a href="/#/update" class="button">Update My Profile</a>
-</div> 
+<hr>
+  <label for="name">Email:</label>
+  <h3>{{thisUser.email}}</h3>
+  <br>
+   <app-user-posts></app-user-posts>
+  <hr>
+   <a href="/#/update" class="btn contact">Update My Profile</a>
 
-<!-- <app-user-posts></app-user-posts>  -->
+    
+</div>
+
+</div>
+<div align="left">
+ </div>
   

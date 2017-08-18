@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { AngularFireAuth } from 'angularfire2/auth';
 import { UserService } from '../_services/user.service';
-
 import { AlertService, AuthenticationService } from '../_services/index';
+import * as firebase from 'firebase/app';
 
 @Component({
     moduleId: module.id,
@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
     returnUrl: string;
 
     constructor(
+        private afa: AngularFireAuth,
         private route: ActivatedRoute,
         private router: Router,
         private usrSvc: UserService,
@@ -33,5 +34,10 @@ export class LoginComponent implements OnInit {
 
     login() {
         this.usrSvc.signin(this.model.email, this.model.password);
+    }
+
+
+    sociallogin() {
+        this.afa.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
     }
 }
