@@ -172,6 +172,25 @@ input:-webkit-autofill:focus {
 }
 
 
+.profile-col {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #134F05;
+    width: 500px;
+    height: 800px;
+    min-width: 300px;
+    border-radius: 15px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding: 20px 40px 80px 40px;
+    border-radius: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background-color: rgb(232, 232, 232);
+}
+
+
+
 .inline {
     display: inline;
     overflow: hidden;

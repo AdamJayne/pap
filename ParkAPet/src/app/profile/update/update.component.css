@@ -1,3 +1,4 @@
+
 .container {
     margin-top: 50px;
     padding-top: 8px;
@@ -40,24 +41,40 @@ border: 1px solid red;
 
 /* For visibility. Delete me */
 border: 1px solid blue;
+=======
+
+
+.profile-col {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    color: #134F05;
+    width: 500px;
+    height: 500px;
+    min-width: 300px;
+    border-radius: 15px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding: 20px 40px 80px 40px;
+    border-radius: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background-color: rgb(232, 232, 232);
 }
 
-#Info strong
-{
-    /* Give it a width */
-    display: inline-block;
-    width: 100px;
+input {
+    color: #134F05;
+    background: rgba(0, 0, 0, 0.10);
+    border-top:none;
+    border-right: none;
+    border-left:none;
+    margin-bottom: 10px;
 
-/* For visibility. Delete me */
-border: 1px solid orange;
 }
 
-#Info span
-{
-    /* Give it a width */
-    display: inline-block;
-    width: 250px;
+p {
+    color: #134F05;
+}
 
-/* For visibility. Delete me */
-border: 1px solid purple;
+label {
+    display: inline-block;
 }

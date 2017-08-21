@@ -1,5 +1,7 @@
+
 #thiscontainer {
     background: white;
+
     margin-top: 10px;
     text-align: center;
     margin-top: 59px;
@@ -10,7 +12,7 @@
  
  input {
     color: #134F05 ;
-    text-align: leftt;
+    text-align: left;
     padding: 10% 10% 10% 10%;
     width: 40%;
 }
