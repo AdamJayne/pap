@@ -14,9 +14,9 @@ export class PostService {
         this.posts = this.afd.list('/post');
     }
     // create
-    create(userId, name, breed, description, image){
+    create(userId, name, breed, description, image, dateFrom, dateTo, createdOn){
         // this.afd.database.ref('posts/'+)
-        var blar = new Post(userId, name, breed, description, image);
+        var blar = new Post(userId, name, breed, description, image, dateFrom, dateTo, createdOn);
         this.post = this.afd.object('/post/' + blar.petName);
         this.post.set(blar);
     }
@@ -34,9 +34,9 @@ export class PostService {
         return this.posts;
     }
     // getUserPosts
-    getByUser(usrpost, userId, callback){
+    getByUser(userId, callback){
         this.afd.database.ref('/post').orderByChild('usrID').equalTo(userId).on("value", function(snapshot){
-            callback(usrpost, snapshot.val())
+            callback(snapshot.val())
         })
     }
     // update
@@ -45,6 +45,6 @@ export class PostService {
     }
     // delete
     deletePost(postName){
-        this.afd.object(postName).remove().then(function(){console.log('done');})
+        this.afd.object('/post/'+ postName).remove().then(function(){console.log('done');})
     }
 }
