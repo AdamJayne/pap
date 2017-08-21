@@ -1,9 +1,21 @@
+<br><br><br>
 <div class="container">
   <ul>
     <div *ngFor="let item of items">
  <label for="name">Pet Posts</label>
  <br>
       {{item.petName}}
+
+  <div *ngFor="let item of items">
+    <div class="row">
+      <div class="col-3">
+        <img src="{{item.image}}">
+        <h2>{{item.petName}}</h2>
+      </div>
+      <div class="col-5">
+          <h3>{{item.description}}</h3>
+        </div>
     </div>
-  </ul>
+    
+  </div>
 </div>
