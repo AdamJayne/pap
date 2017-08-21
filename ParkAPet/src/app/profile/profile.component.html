@@ -1,9 +1,28 @@
-<div class="container" id="thiscontainer">
-    <label for="name">Name:</label>
-    <h3>{{thisUser.firstName}} {{thisUser.lastName}}
-    </h3>
-    <a href="/#/update" class="button">Update My Profile</a>
-</div> 
-
-<app-user-posts></app-user-posts>
-  
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 " id="thiscontainer">
+            <div class="profile-col">
+                <div class="container" id="thiscontainer">
+                   <i class="fa fa-user-circle" aria-hidden="true"></i>
+                   <br><br><br>
+                   <h1>My Profile</h1>
+                   <hr>
+                   <label for="name">Name:</label>
+                   <h3>{{thisUser.firstName}} {{thisUser.lastName}}
+                   </h3>
+                <hr>
+                 <label for="name">Email:</label>
+                 <h3>{{thisUser.email}}</h3>
+                 <hr>
+                  <a href="/#/update" class="btn contact">Update My Profile</a>
+                
+                   
+                </div>
+                
+                </div>
+                <div align="left">
+                </div>
+        </div>
+        <app-user-posts class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6"></app-user-posts>
+    </div>
+</div>

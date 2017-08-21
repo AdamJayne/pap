@@ -22,7 +22,8 @@ export class Testbench2Component implements OnInit {
         if(err){
           return console.log(err);
         }
-        this.pstSvc.create(usrID, this.post.petName, this.post.petBreed, this.post.description, snap.downloadURL);
+        var mydate = new Date();
+        this.pstSvc.create(usrID, this.post.petName, this.post.petBreed, this.post.description, snap.downloadURL, this.post.dateFrom, this.post.dateTo, mydate);
       })
     }
   }
