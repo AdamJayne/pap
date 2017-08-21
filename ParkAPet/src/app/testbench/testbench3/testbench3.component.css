@@ -1,31 +1,19 @@
 .post {
-
     margin-top: 20px;
-
 }
-
-
 
 .petHead {
-
     background-color: #e9e5ff;
-
 }
-
-
 
 .petBod {
-
     background-color: #f8f7ff;
-
     border-bottom: solid 2px #ADA1EB;
-
 }
-
 img {
-
-    border-radius: 100%;
-
-    border: 1px solid black;
-
+<<<<<<< HEAD
+   border-radius: 100%;
+   height: 150px;
+   width: 150px;
+   border: 1px solid black;
 }
