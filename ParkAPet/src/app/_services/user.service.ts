@@ -3,7 +3,6 @@ import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2/database';
-
 import { User } from '../_helpers/_models/user';
 
 @Injectable()
@@ -41,6 +40,21 @@ export class UserService {
                 console.log(err);
             })
     }
+//TO-DO: SOCIAL LOGIN METHOD
+/*facebook login method
+socialLogin(loginProvider) {
+  var provider;
+  if (loginProvider === 'facebook') {
+    provider = this.afa.auth.FacebookAuthProvider();
+  }
+  return this.afa.auth.login({
+     provider: provider,
+     method: AuthMethods.Popup,
+  });
+}
+*/
+
+    
     signout(){
         localStorage.clear();
         this.router.navigateByUrl('landing');

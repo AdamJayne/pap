@@ -31,10 +31,8 @@ export class ProfileComponent implements OnInit {
         // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
 
         this.usrSvc.getProfile(window.localStorage.getItem('usrId'), (data)=>{
-            var keys = Object.keys(data);
-            console.log(keys);
-            this.thisUser = (data[keys[0]]);
-            console.log(data[keys[0]])
+            var keys = Object.keys(data)
+            this.thisUser = (data[keys[0]])
         });
     }
 }

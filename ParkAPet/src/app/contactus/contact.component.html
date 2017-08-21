@@ -1,29 +1,20 @@
-<div class="sidebar">
-<div class="contact-div">
-   <br><br><br>
-   <div class="contact-col">
-     <div class="new-message">
-         <br><br>
-        <form #f='ngForm' (ngSubmit)='onSubmit()'>
-    <div align="center">
-        <i class="fa fa-envelope" aria-hidden="true" style="font-size:40px"></i>
-        <h3>Contact Our Team</h3>
-    </div>
-        <hr>
-            <p>Enter Name:</p>
-            <input name='userName' type="text" [(ngModel)]='model.name' required>
-           
-            <p>Please leave your message here:</p>
-            <textarea name='description' placeholder='Hello PAP Team! May you please help me out with.....? Thank you!' [(ngModel)]='model.description' required></textarea>
-<br><br>
+
+<div class="container">
+  <div class="contact-col">
+
+   <br><br>
+     <div class="new-message">  
+       <img src="https://image.ibb.co/jcjXKv/papalogo1.png" style="width:80px; height:80px;">  
+            <p>Click below to submit your request! We will get back to you in 5 business days! Thank you!</p>
+
             <div align="right">
             <!-- <button [disabled]="loading" class="button  email">Submit</button> -->
-             <a href="/#/submit" class="button">Submit Request</a> 
-            
+        <a href="mailto:parkerpetson@gmail.com" class="button">Email Us</a> 
            </div>
-        </form>
-       </div>
+           <br>
+            <br>
+
+    </div>
+    <a href="/#/landing" class="btn contact">Back to Home</a>
     </div>
 </div>
-
-

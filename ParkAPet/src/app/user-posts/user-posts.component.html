@@ -1,7 +1,18 @@
-<div class="container">
-  <ul>
-    <div *ngFor="let item of items">
-      {{item.petName}}
+<div class="container-fluid">
+  <div *ngFor="let item of items">
+    <br>
+    <div class="row">
+      <div class="petinfo col-lg-4">
+        <img src="{{item.image}}">
+        <h2>{{item.petName}}</h2>
+      </div>
+      <div class="petbod col-lg-8">
+        <h4>{{item.petBreed}}</h4>
+        <br>
+        <h4 class="desc">{{item.description}}</h4>
+        <a class="btn btn-danger" (click)="delete(item.petName);">Delete</a>
+        <a class="btn btn-success" (click)="goUpdate(item.petName)">Update</a>
+      </div>
     </div>
-  </ul>
+  </div>
 </div>

@@ -1,4 +1,48 @@
 
+.container {
+    margin-top: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: white;
+}
+
+#ProfilePage
+{
+    /* Move it off the top of the page, then centre it horizontally */
+    margin: 50px auto;
+    width: 635px;
+
+/* For visibility. Delete me */
+border: 1px solid red;
+}
+
+#LeftCol
+{
+    /* Move it to the left */
+    float: left;
+
+    width: 200px;
+    text-align: center;
+
+    /* Move it away from the content */
+    margin-right: 20px;
+
+/* For visibility. Delete me */
+border: 1px solid red;
+}
+
+#Info
+{
+    width: 400px;
+    text-align: center;
+
+    /* Move it to the right */
+    float: right;
+
+/* For visibility. Delete me */
+border: 1px solid blue;
+=======
+
 
 .profile-col {
     display: block;
@@ -24,6 +68,7 @@ input {
     border-right: none;
     border-left:none;
     margin-bottom: 10px;
+
 }
 
 p {
@@ -32,12 +77,4 @@ p {
 
 label {
     display: inline-block;
-    font-family: 'Nunito', sans-serif;
-    color: #1C1F35;
-    letter-spacing: 2px;
-    max-width: 100%;
-    margin-bottom: 5px;
-    font-weight: 0;
-    font-size: 11px;
-    text-transform: uppercase;
 }
