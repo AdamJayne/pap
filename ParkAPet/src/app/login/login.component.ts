@@ -38,6 +38,8 @@ export class LoginComponent implements OnInit {
 
 
     sociallogin() {
-        this.afa.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
+        this.afa.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
     }
+
+    
 }
